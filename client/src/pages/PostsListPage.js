@@ -5,7 +5,7 @@ import Loading from '../components/Loading';
 
 class PostsListPage extends React.Component {
   state = {
-    posts: [],
+    posts: [`<Post props={'hello',"hellsoo",1} key='Name' />`],
     loading: true,
   }
 
