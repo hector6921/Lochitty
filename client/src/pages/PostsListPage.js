@@ -13,6 +13,7 @@ class PostsListPage extends React.Component {
     fetch("/api/posts")
       .then(res => res.json())
       .then(posts => {
+        console.log(posts)
         this.setState({
           loading: false,
           posts: posts.map((p,ii) => <Post {...p} key={ii} />),

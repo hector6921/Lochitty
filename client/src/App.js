@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from './components/header';
+import FAB from './components/fab';
+
 import { 
   BrowserRouter as Router, 
   Switch, 
