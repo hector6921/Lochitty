@@ -23,20 +23,20 @@ export default function Home() {
   return (
     
     <><Header />
-
     <Router>
-    <div className="container-fluid text-center">
-      <div className="row justify-content-center">
-        <Switch>
-          <Route path="/posts/new" component={PostFormPage} />
-          <Route path="/posts/:id" component={ShowPostPage} />
-          <Route path="/about-us" component={AboutUsPage} />
-          <Route path="/" component={PostsListPage} />
-        </Switch>
-      </div>
-    </div>
-    </Router>
-
+        <div className="container-fluid text-center" >
+          <div className="row justify-content-center">
+    
+            <Switch>
+              <Route path="/posts/new" component={PostFormPage} />
+              <Route path="/posts/:id" component={ShowPostPage} />
+              <Route path="/about-us" component={AboutUsPage} />
+              <Route path="/" component={PostsListPage} />
+            </Switch>
+            
+          </div>
+        </div>
+        </Router>
     <FAB />
 </>
   );
@@ -46,7 +46,7 @@ export default function Home() {
 class App extends React.Component {
     render() {
       return (
-          <></>
+        Home()
       );
     }
   }

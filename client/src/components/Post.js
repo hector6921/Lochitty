@@ -6,7 +6,7 @@ function Post({ content, createdAt, id }) {
     <div className="col-10 col-md-8 col-lg-7">
       <div className="card mb-4 shadow">
         <div className="card-body card-text">
-          <Link to={"/posts/"+id}>{ content }</Link>
+          <Link to={"/posts/"+id} style={{color:'black', textDecoration: 'none' }}>{ content }</Link>
         </div>
         <div className="card-footer small text-muted text-right">
           { createdAt }
