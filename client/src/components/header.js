@@ -7,7 +7,9 @@ import Lochitty from './lochitty.png';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import 'typeface-roboto';
+import { color } from '@mui/system';
 
+import './header.css';
 
 export default function Header() {
   const [alignment, setAlignment] = React.useState('web');
@@ -20,40 +22,70 @@ export default function Header() {
     palette: {
       primary: {
         // Purple and green play nicely together.
-        main: '#e1eced',
+        main: '#000000',
       },
       secondary: {
         // This is green.A700 as hex.
         main: '#689ca4',
+      },
+      '.Mui-selected': {
+        backgroundColor: 'rgba(104, 156, 164, 0.28)',
+      },
+      '.Mui-active': {
+        backgroundColor: 'rgba(104, 156, 164, 0.28)',
+      },
+      '.Mui-checked': {
+        backgroundColor: 'rgba(104, 156, 164, 0.28)',
       },
     },
   });
  
   return (
     <ThemeProvider theme={theme}>
-    <ToggleButtonGroup
-      color="primary"
-      value={alignment}
-      exclusive
-      onChange={handleChange}
-      style={{display: 'flex',
+
+
+  <div style={{display: 'flex',
       justifyContent: "space-around",
       alignItems: 'center',
       padding: '20px',
       paddingBottom: '50px',
       backgroundColor: '#e1ebed',
       backgroundImage: 'linear-gradient(#e1ebed, #e1ebed, #e1ebed, white)',
-    }}
+    }}>
+      
+
+    <img src={Lochitty} style={{width:'130px'}}/>
+
+    <div style={{backgroundColor: 'white', borderRadius: '40px', backgroundColor:'transparent', borderColor:'transparent', paddingRight: '4em'}}>
+    <div style={{backgroundColor: 'white', borderRadius: '40px', boxShadow: '0px 4px 15px rgba(104, 156, 164, 0.2)'}}>
+
+    <ToggleButtonGroup
+      color="primary"
+      value={alignment}
+      exclusive
+      onChange={handleChange}
+      sx={{
+        '&:.Mui-selected': {
+          backgroundColor: 'rgba(104, 156, 164, 0.28)',
+        },
+        '&:.Mui-active': {
+          backgroundColor: 'rgba(104, 156, 164, 0.28)',
+        },
+        '&:.Mui-checked': {
+          backgroundColor: 'rgba(104, 156, 164, 0.28)',
+        },
+      }}
     >
-      <img src={Lochitty} style={{width:'130px'}}/>
-      <div style={{borderRadius: '40px', paddingRight:'4em', backgroundColor:'transparent', borderColor:'transparent'}}>
-        <div style={{borderRadius: '40px', boxShadow: '0px 4px 15px rgba(104, 156, 164, 0.2)'}}>
-          <ToggleButton style={{borderColor:'transparent', fontFamily: 'Roboto', padding:'1em', paddingInline:'2em', backgroundColor:'white', fontWeight: "bold", borderRadius: '100px 0 0 100px'}} size='small' value="messages">Messages</ToggleButton>
-          <ToggleButton style={{borderColor:'transparent', fontFamily: 'Roboto', padding:'1em', paddingInline:'2em', backgroundColor:'white',fontWeight: "bold", borderRadius: '0 100px 100px 0'}} size='small' value="events">Events</ToggleButton>
-        </div>
+      <ToggleButton style={{borderColor:'transparent', fontFamily: 'Roboto', padding:'1em', paddingInline:'2em', fontWeight: "bold", borderRadius: '100px 0 0 100px'}} size='small' value="messages">Messages</ToggleButton>
+      <ToggleButton style={{borderColor:'transparent', fontFamily: 'Roboto', padding:'1em', paddingInline:'2em',fontWeight: "bold", borderRadius: '0 100px 100px 0'}} size='small' value="events">Events</ToggleButton>
+    </ToggleButtonGroup>
+
+    </div>
       </div>
       <Button value="events" style={{color:"#000000"}}>Login</Button> 
-    </ToggleButtonGroup>
+
+      </div>
+      
     </ThemeProvider>
   );
 }
