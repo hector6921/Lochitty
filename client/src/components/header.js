@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import { ImageListItem } from '@mui/material';
 import { Button } from '@mui/material';
 import Lochitty from './lochitty.png';
 
@@ -21,29 +20,26 @@ export default function Header() {
   const theme = createTheme({
     palette: {
       primary: {
-        // Purple and green play nicely together.
         main: '#000000',
       },
       secondary: {
-        // This is green.A700 as hex.
         main: '#689ca4',
       },
-      '.Mui-selected': {
+      ".Mui-selected": {
         backgroundColor: 'rgba(104, 156, 164, 0.28)',
       },
-      '.Mui-active': {
+      ".Mui-active": {
         backgroundColor: 'rgba(104, 156, 164, 0.28)',
       },
-      '.Mui-checked': {
+      ".Mui-checked": {
         backgroundColor: 'rgba(104, 156, 164, 0.28)',
       },
     },
   });
  
   return (
-    <ThemeProvider theme={theme}>
-
-
+  
+  <ThemeProvider theme={theme}>
   <div style={{display: 'flex',
       justifyContent: "space-around",
       alignItems: 'center',
@@ -54,7 +50,7 @@ export default function Header() {
     }}>
       
 
-    <img src={Lochitty} style={{width:'130px'}}/>
+      <a href="client\src\pages\Home.js"><img src={Lochitty} style={{width:'130px'}}/></a>
 
     <div style={{backgroundColor: 'white', borderRadius: '40px', backgroundColor:'transparent', borderColor:'transparent', paddingRight: '4em'}}>
     <div style={{backgroundColor: 'white', borderRadius: '40px', boxShadow: '0px 4px 15px rgba(104, 156, 164, 0.2)'}}>
