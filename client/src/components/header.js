@@ -53,7 +53,9 @@ export default function Header() {
       <a href="client\src\pages\Home.js"><img src={Lochitty} style={{width:'130px'}}/></a>
 
     <div style={{backgroundColor: 'white', borderRadius: '40px', backgroundColor:'transparent', borderColor:'transparent', paddingRight: '4em'}}>
-    <div style={{backgroundColor: 'white', borderRadius: '40px', boxShadow: '0px 4px 15px rgba(104, 156, 164, 0.2)'}}>
+    
+    <div style={{backgroundColor: 'white', borderRadius: '40px', boxShadow: '0px 0px 5px 5px rgba(104, 156, 164, 0.2)', padding:'0.4em 0.7em'}}>
+
 
     <ToggleButtonGroup
       color="primary"
@@ -72,9 +74,10 @@ export default function Header() {
         },
       }}
     >
-      <ToggleButton style={{borderColor:'transparent', fontFamily: 'Roboto', padding:'1em', paddingInline:'2em', fontWeight: "bold", borderRadius: '100px 0 0 100px'}} size='small' value="messages">Messages</ToggleButton>
-      <ToggleButton style={{borderColor:'transparent', fontFamily: 'Roboto', padding:'1em', paddingInline:'2em',fontWeight: "bold", borderRadius: '0 100px 100px 0'}} size='small' value="events">Events</ToggleButton>
+      <ToggleButton style={{borderColor:'transparent', fontFamily: 'Roboto', paddingInline:'1em', fontWeight: "bold", borderRadius: '100px 0 0 100px'}} size='small' value="messages">Messages</ToggleButton>
+      <ToggleButton style={{borderColor:'transparent', fontFamily: 'Roboto', paddingInline:'1em',fontWeight: "bold", borderRadius: '0 100px 100px 0'}} size='small' value="events">Events</ToggleButton>
     </ToggleButtonGroup>
+  
 
     </div>
       </div>

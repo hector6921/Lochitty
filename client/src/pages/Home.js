@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import { ImageListItem } from '@mui/material';
+import { Container, ImageListItem } from '@mui/material';
 import { Button } from '@mui/material';
 import Lochitty from '../components/lochitty.png'
 import Header from '../components/header';
@@ -21,8 +21,8 @@ import AboutUsPage from './AboutUsPage';
 
 export default function Home() {
   return (
-    
-    <><Header />
+    <Container>
+    <Header />
     <Router>
         <div className="container-fluid text-center" >
           <div className="row justify-content-center">
@@ -37,16 +37,9 @@ export default function Home() {
           </div>
         </div>
         </Router>
-    <FAB />
-</>
+
+    </Container>
   );
 }
 
 
-class App extends React.Component {
-    render() {
-      return (
-        Home()
-      );
-    }
-  }

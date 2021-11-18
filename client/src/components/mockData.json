@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "user":{
+            "name":"John Will Xll",
+            "profilePic":" "
+        },
+        "image": " ",
+        "eventType": "rooftop party",
+        "location": {
+            "city": "new york",
+            "zipCode": "10001",
+            "state": "new york"
+        }
+    },
+    {
+        "id": 2,
+        "user":{
+            "name":"sarah lewise",
+            "profilePic":" "
+        },
+        "image": " ",
+        "eventType": "social gathering",
+        "location": {
+            "city": "ozone park",
+            "zipCode": "11476",
+            "state": "new york"
+        }
+    },
+    {
+        "id": 3,
+        "user":{
+            "name":"Max Grant",
+            "profilePic":" "
+        },
+        "image": " ",
+        "eventType": "hikers club",
+        "location": {
+            "city": "new paltz",
+            "zipCode": "12342",
+            "state": "new york"
+        }
+    },
+    {
+        "id": 4,
+        "user":{
+            "name":"cam2one",
+            "profilePic":" "
+        },
+        "image": " ",
+        "eventType": "classic auto display",
+        "location": {
+            "city": "new york",
+            "zipCode": "10022",
+            "state": "new york"
+        }
+    },
+    {
+        "id": 5,
+        "user":{
+            "name":"samas01",
+            "profilePic":" "
+        },
+        "image": " ",
+        "eventType": "sakura trees viewing brooklyn botanical garden",
+        "location": {
+            "city": "brooklyn",
+            "zipCode": "110342",
+            "state": "new york"
+        }
+    },
+    {
+        "id": 6,
+        "user":{
+            "name":"maya campbell",
+            "profilePic":" "
+        },
+        "image": " ",
+        "eventType": "bible study",
+        "location": {
+            "city": "new york",
+            "zipCode": "10021",
+            "state": "new york"
+        }
+    }
+]
