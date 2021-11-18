@@ -6,7 +6,8 @@ import { Button } from '@mui/material';
 import Lochitty from '../components/lochitty.png'
 import Header from '../components/header';
 import FAB from '../components/fab';
-
+import EventCard from '../components/eventFetcher';
+import eventData from '../components/mockData.json';
 import { 
   BrowserRouter as Router, 
   Switch, 
@@ -23,20 +24,11 @@ export default function Home() {
   return (
     <Container>
     <Header />
-    <Router>
-        <div className="container-fluid text-center" >
-          <div className="row justify-content-center">
+    {eventData.map((item,index)=>(<EventCard key={index} data={item}/>))}
+    {/* {Object.values(eventData).map(event => (
+      <EventCard props={event} />
+    ))} */}
     
-            <Switch>
-              <Route path="/posts/new" component={PostFormPage} />
-              <Route path="/posts/:id" component={ShowPostPage} />
-              <Route path="/about-us" component={AboutUsPage} />
-              <Route path="/" component={PostsListPage} />
-            </Switch>
-            
-          </div>
-        </div>
-        </Router>
 
     </Container>
   );
