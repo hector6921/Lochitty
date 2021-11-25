@@ -94,11 +94,12 @@ export default function Header() {
 
     </div>
       </div>
-      <Button onClick={modalPage} value="events" style={{color:"#000000"}}>Login</Button> 
-
+      {/* <ToggleButton onChange={() => {setDisplayModal(!displayModal)}} onClick={modalPage} value="events" style={{color:"#000000"}}>Login</ToggleButton>  */}
+      <NestedModal/>
       </div>
       {/* pop up functionality */}
-      {displayModal===true?<NestedModal/>:null}
+      {/* {displayModal===true?<NestedModal/>:null} */}
+      
       {/* pop up functionality */}
     </ThemeProvider>
   );
