@@ -4,6 +4,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
+import SignIn from '../pages/signIn';
+import SignUp from '../pages/signUp';
 
 const style = {
   position: 'absolute',
@@ -30,7 +32,7 @@ function ChildModal() {
 
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>Open Child Modal</Button>
+      <Button style={{color:"#0405ff"}} onClick={handleOpen}>Don't have an account? Sign Up</Button>
       <Modal
         hideBackdrop
         open={open}
@@ -38,12 +40,9 @@ function ChildModal() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 200 }}>
-          <h2 id="child-modal-title">Text in a child modal</h2>
-          <p id="child-modal-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
-          <Button onClick={handleClose}>Close Child Modal</Button>
+        <Box sx={{ ...style, width: 500 }}>
+        <SignUp/>
+          <Button style={{color:"#0405ff"}} onClick={handleClose}>Return to Login</Button>
         </Box>
       </Modal>
     </React.Fragment>
@@ -68,11 +67,8 @@ export default function NestedModal() {
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
       >
-        <Box sx={{ ...style, width: 400 }}>
-          <h2 id="parent-modal-title">Text in a modal</h2>
-          <p id="parent-modal-description">
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </p>
+        <Box sx={{ ...style, width: 500 }}>
+        <SignIn/>
           <ChildModal />
         </Box>
       </Modal>
