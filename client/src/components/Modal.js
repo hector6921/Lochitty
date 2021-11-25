@@ -1,5 +1,6 @@
 //get Modal compponent for validation and pop up functionanlity
-import * as React from 'react';
+import {useState} from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
@@ -19,7 +20,7 @@ const style = {
 };
 
 function ChildModal() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
   };
@@ -50,7 +51,7 @@ function ChildModal() {
 }
 
 export default function NestedModal() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(true);
   const handleOpen = () => {
     setOpen(true);
   };
@@ -60,7 +61,7 @@ export default function NestedModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      {/* <Button onClick={handleOpen}></Button> */}
       <Modal
         open={open}
         onClose={handleClose}
