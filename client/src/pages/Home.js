@@ -1,12 +1,13 @@
 import * as React from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import { ImageListItem } from '@mui/material';
+import { Container, ImageListItem } from '@mui/material';
 import { Button } from '@mui/material';
 import Lochitty from '../components/lochitty.png'
 import Header from '../components/header';
 import FAB from '../components/fab';
-
+import EventCard from '../components/eventFetcher';
+import eventData from '../components/mockData.json';
 import { 
   BrowserRouter as Router, 
   Switch, 
@@ -21,32 +22,16 @@ import AboutUsPage from './AboutUsPage';
 
 export default function Home() {
   return (
+    <Container>
+    <Header />
+    {eventData.map((item,index)=>(<EventCard key={index} data={item}/>))}
+    {/* {Object.values(eventData).map(event => (
+      <EventCard props={event} />
+    ))} */}
     
-    <><Header />
-    <Router>
-        <div className="container-fluid text-center" >
-          <div className="row justify-content-center">
-    
-            <Switch>
-              <Route path="/posts/new" component={PostFormPage} />
-              <Route path="/posts/:id" component={ShowPostPage} />
-              <Route path="/about-us" component={AboutUsPage} />
-              <Route path="/" component={PostsListPage} />
-            </Switch>
-            
-          </div>
-        </div>
-        </Router>
-    <FAB />
-</>
+
+    </Container>
   );
 }
 
 
-class App extends React.Component {
-    render() {
-      return (
-        Home()
-      );
-    }
-  }
