@@ -1,0 +1,1 @@
+// add a layout of components and pages for easy future reference and debugging

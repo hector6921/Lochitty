@@ -1,4 +1,4 @@
-import React from 'react';
+import {React,useState} from 'react';
 import Header from './components/header';
 import FAB from './components/fab';
 
@@ -17,11 +17,15 @@ import SignIn from './pages/signIn';
 import SignUp from './pages/signUp';
 import './App.css';
 import Home from './pages/Home';
+import NestedModal from './components/Modal';
 
 
-function Navigation(props) {
+export default function App() {
   return (
+
     <Home/>
+
+
 
     // <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
     //   <Link className="navbar-brand" to="/">Micro Blog</Link>
@@ -42,13 +46,5 @@ function Navigation(props) {
 }
 
 
-class App extends React.Component {
-  render() {
-    return (
-        Home()
-    );
-  }
-}
 
 
-export default App;

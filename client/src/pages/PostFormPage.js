@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 
 class PostFormPage extends React.Component {
-  state = {
+    state = {
     error: false,
     success: false,
     content: '',
@@ -65,7 +65,7 @@ class PostFormPage extends React.Component {
             className="form-control mr-3 rounded"
             onChange={this.contentChanged}
           />
-          <button className="btn btn-primary" onClick={this.savePost}>Save Post</button>
+          <button className="btn btn-primary" onClick={this.savePost}>Post Message</button>
         </div>
       </div>
     );
