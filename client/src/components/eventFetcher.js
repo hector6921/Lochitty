@@ -1,3 +1,4 @@
+//needs fix on the dropt down description the component needs a parent that has a column direction in order to drop down properly
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
