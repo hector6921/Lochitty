@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import '../components/fancyButtons.css';
 
-class PostFormPage extends React.Component {
+class PostFormEvent extends React.Component {
     state = {
     error: false,
     success: false,
@@ -68,8 +68,8 @@ class PostFormPage extends React.Component {
               { errorMessage }
             </div>
           <div>
-            <div newPost style={{ paddingBottom: '1em', fontSize: '2em', fontWeight: 'bolder' }}>
-              Compose Post
+            <div newPost style={{ paddingBottom: '1em', fontSize: '2em', fontWeight: 'bolder', whiteSpace: 'nowrap' }}>
+              Compose Event
             </div>
             <div inputs style={{ textAlign: 'center', paddingLeft: '2em' }}>
               <input style={{ width: '20em' }}
@@ -94,4 +94,4 @@ class PostFormPage extends React.Component {
   }
 }
 
-export default PostFormPage;
+export default PostFormEvent;

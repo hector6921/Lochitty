@@ -25,7 +25,7 @@ const theme = createTheme({
 });
 
 
-function Post({ content, createdAt, id }) {
+function Post({title, content, createdAt, id }) {
   return (
     <ThemeProvider theme={theme}>
 
@@ -33,7 +33,7 @@ function Post({ content, createdAt, id }) {
       <Box sx={{ gridArea: 'title'}}>
         <CardHeader
           sx={{fontSize: 2}}
-          title={"Post by NAME"}
+          title={ title }
           subheader={ createdAt } 
         />
       </Box>
