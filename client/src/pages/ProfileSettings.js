@@ -24,7 +24,7 @@ const theme = createTheme({
 });
 
 
-function Post({profileID, profileName, setLocation, bio}) {
+function ProfileSettings({profileID, profileName, setLocation, bio}) {
   return (
     <ThemeProvider theme={theme}>
         <Card variant="outlined" sx={{borderColor: 'transparent', borderRadius: 8, paddingTop: 5, paddingLeft: 5, paddingRight: 5}}>
@@ -95,4 +95,4 @@ function Post({profileID, profileName, setLocation, bio}) {
   );
 }
 
-export default Post;
+export default ProfileSettings;
