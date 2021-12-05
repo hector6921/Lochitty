@@ -7,12 +7,13 @@ import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import EventRoundedIcon from '@mui/icons-material/EventRounded';
 import ForumRoundedIcon from '@mui/icons-material/ForumRounded';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import ManageAccountsRoundedIcon from '@mui/icons-material/ManageAccountsRounded';
 
 
 const actions = [
   { icon: <EventRoundedIcon style={{ fill: '#000000' }} />, name: 'Event', link: '/posts/newEvent'},
   { icon: <ForumRoundedIcon style={{ fill: '#000000' }} />, name: 'Message', link: '/posts/newMessage'},
+  { icon: <ManageAccountsRoundedIcon style={{ fill: '#000000' }} />, name: 'Profile Settings', link:'/profile-settings'},
 ];
 
 const theme = createTheme({
