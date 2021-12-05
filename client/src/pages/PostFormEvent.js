@@ -1,7 +1,20 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import '../components/fancyButtons.css';
-import Header from '../components/header.js';
+import TextField from '@mui/material/TextField';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#689ca4',
+    },
+    secondary: {
+      main: '#689ca4',
+    },
+  },
+});
 
 class PostFormEvent extends React.Component {
     state = {
@@ -64,7 +77,7 @@ class PostFormEvent extends React.Component {
     }
 
     return (
-
+    <ThemeProvider theme={theme}>
       <div className="col-10 col-md-8 col-lg-7" style={{ alignItems: 'center', height: '25em', width: '25em' }}>
         <div style={{ padding: '200' }}>
           {errorMessage}
@@ -73,25 +86,16 @@ class PostFormEvent extends React.Component {
           <div newPost style={{ paddingBottom: '1em', fontSize: '2em', fontWeight: 'bolder', whiteSpace: 'nowrap' }}>
             Compose Event
           </div>
-          <div inputs style={{ textAlign: 'center', paddingLeft: '2em' }}>
-            <input style={{ width: '20em' }}
-              type="text"
-              placeholder="Title..."
-              value={this.state.title}
-              className="form-control mr-3 rounded"
-              onChange={this.titleChanged} />
+          <div inputs style={{ borderRadius: "4em", textAlign: 'center', paddingLeft: '2em' }}>
+          <TextField required style={{width: '20em', marginLeft: "auto", marginRight: "auto"}} sx={{}} id="Title" label="Title..." variant="outlined" value={this.state.title} onChange={this.titleChanged} />
             <div style={{ padding: '0.5em' }}></div>
-            <input style={{ height: '10em', width: '20em' }}
-              type="text"
-              placeholder="Content..."
-              value={this.state.content}
-              className="form-control mr-3 rounded"
-              onChange={this.contentChanged} />
+          <TextField multiline rows={4} required style={{width: '20em', marginLeft: "auto", marginRight: "auto"}} sx={{borderRadius: "4em"}} id="Content" label="Content..." variant="outlined" value={this.state.content} onChange={this.contentChanged} />
             <div style={{ padding: '0.5em' }}></div>
             <button style={{ position: 'relative', left: '35%' }} className="btn btn-fancy" onClick={this.savePost}>Post Message</button>
           </div>
         </div>
       </div>
+      </ThemeProvider>
     );
   }
 }

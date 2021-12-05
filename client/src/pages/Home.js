@@ -30,51 +30,26 @@ import Profile from './Profile.js';
 
 export default function Home() {
   return (
+    <><Header />
+    <Container>
     <Router>
         <div>
           <div >
-            <Header/>
             <Switch>
               <Route path="/profile" component={Profile} />
               <Route path="/profile-settings" component={ProfileSettings} />
-              <Route path="/posts/newMessage" component={PostMessages}/>
+              <Route path="/posts/newMessage" component={PostMessages} />
               <Route path="/posts/newEvent" component={PostEvent} />
-              <Container>
-              <Route path="/events" component={ShowEvents}>
-                <Card variant="outlined" sx={{borderColor: 'transparent', borderRadius: 8, paddingTop: 5, paddingLeft: 5, paddingRight: 5}}>
-                  <Box 
-                    display="flex"
-                    justifyContent="left"
-                    alignItems="left"
-                    minHeight="7vh" 
-                    padding="1em"
-                    >
-                      <h1><b>Events</b></h1>
-                  </Box>
-                </Card>
-                <ShowEvents/><FAB /></Route>
+              <Route path="/events" component={ShowEvents} />
               <Route path="/posts/:id" component={ShowPostPage} />
+              <Route path="/profiles" component={Profile} />
               <Route path="/about-us" component={AboutUsPage} />
-              <Route path="/" component={PostsListPage}>
-                  <Card variant="outlined" sx={{borderColor: 'transparent', borderRadius: 8, paddingTop: 5, paddingLeft: 5, paddingRight: 5}}>
-                    <Box 
-                      display="flex"
-                      justifyContent="left"
-                      alignItems="left"
-                      minHeight="7vh" 
-                      padding="1em"
-                      >
-                        <h1><b>Messages</b></h1> 
-                    </Box>
-                  </Card>
-                <PostsListPage/>
-              <FAB/></Route>
-              </Container>
+              <Route path="/" component={PostsListPage} />
             </Switch>
           </div>
         </div>
         </Router>
-
+    </Container></>
   );
 }
 

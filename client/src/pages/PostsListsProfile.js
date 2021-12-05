@@ -31,13 +31,13 @@ class PostsListPage extends React.Component {
     }
 
     return (
-      <><Card variant="outlined" sx={{ borderColor: 'transparent', borderRadius: 8, paddingTop: 0.5, paddingLeft: 5, paddingRight: 5 }}>
+      <Card variant="outlined" sx={{backgroundColor: "#f2f6f700", borderColor: 'transparent', borderRadius: 8, paddingTop: 0.5, paddingLeft: 5, paddingRight: 5 }}>
         <div className="container-fluid text-center">
           <div className="row justify-content-center">
             {this.state.posts}
           </div>
         </div>
-      </Card><FAB /></>
+      </Card>
     );
   }
 }

@@ -6,14 +6,10 @@ import Avatar from '@mui/material/Avatar';
 import MockAvatarImage from '../images/AvatarMock.png';
 import { deepOrange, deepPurple } from '@mui/material/colors';
 import TextField from '@mui/material/TextField';
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
-import Button from '@mui/material/Button';
-import snackBar from '../components/snackBar.js';
 import '../components/fancyButtons.css';
 import Header from '../components/header';
 import { Container, ImageListItem } from '@mui/material';
-import PostsListPage from './PostsListPage';
+import PostsListProfile from './PostsListsProfile';
 
 const theme = createTheme({
   palette: {
@@ -30,14 +26,14 @@ const theme = createTheme({
 function Profile({profileID, profileName, setLocation, bio}) {
   return (
     <ThemeProvider theme={theme}>
-      <Header style={{position:"fixed"}}/>
         <div style={{position: "absolute",
           top: "5em",
+          left: 0,
           zIndex: "0",
           width: "100%",
           justifyContent: "space-around",
           alignItems: 'center',
-          padding: '20px',
+          padding: '200px',
           paddingBottom: '400px',
           backgroundColor: '#e1ebed',
           backgroundImage: 'linear-gradient(#e1ebed, #e1ebed, #e1ebed, white)',
@@ -46,25 +42,27 @@ function Profile({profileID, profileName, setLocation, bio}) {
         <Container>
        
 
-      <div class="Avatar" style={{paddingTop: "6em", paddingBottom: "10em"}}>
-        <Avatar style={{backgroundImage: "url(" + MockAvatarImage + ")",transform: "translate(-50%, -50%)", backgroundRepeat: "no-wrap", backgroundPosition: "center", backgroundSize:"200px", position: "absolute", left: "50%", right:"50%", width: 110, height: 110 }}> </Avatar>
+      <div class="Avatar" style={{paddingBottom: "10em"}}>
+        <Avatar style={{backgroundImage: "url(" + MockAvatarImage + ")",transform: "translate(-50%, -50%)", backgroundRepeat: "no-wrap", backgroundPosition: "center", backgroundSize:"200px", position: "absolute", top: "20%", left: "50%", right:"50%", width: 110, height: 110 }}> </Avatar>
       </div>
 
       <Box 
-            left= "43%"
-            position= "absolute"
+            position = "absolute"
+            top = "35%"
+            left = "43%"
             display="flex"
             minHeight="7vh" 
             zIndex= "3"
-            bottomPadding="1em"
+            bottomMargin="2em"
+            textAlign="center"
             >
               <h1> <b>FULL NAME</b></h1>
               
       </Box>
 
-
-      <PostsListPage/>
-
+      <div style={{position: "absolute", width: "70%", paddingTop: '7em'}}>
+        <PostsListProfile/>
+      </div>
 
       <Box
       display="flex"
