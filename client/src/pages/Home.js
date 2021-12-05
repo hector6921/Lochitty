@@ -33,13 +33,12 @@ export default function Home() {
     <Router>
         <div>
           <div >
+            <Header/>
             <Switch>
               <Route path="/profile" component={Profile} />
               <Route path="/profile-settings" component={ProfileSettings} />
               <Route path="/posts/newMessage" component={PostMessages}/>
               <Route path="/posts/newEvent" component={PostEvent} />
-              <React.Fragment>  
-              <Header />
               <Container>
               <Route path="/events" component={ShowEvents}>
                 <Card variant="outlined" sx={{borderColor: 'transparent', borderRadius: 8, paddingTop: 5, paddingLeft: 5, paddingRight: 5}}>
@@ -56,9 +55,21 @@ export default function Home() {
                 <ShowEvents/><FAB /></Route>
               <Route path="/posts/:id" component={ShowPostPage} />
               <Route path="/about-us" component={AboutUsPage} />
-              <Route path="/" component={PostsListPage}><PostsListPage/><FAB/></Route>
+              <Route path="/" component={PostsListPage}>
+                  <Card variant="outlined" sx={{borderColor: 'transparent', borderRadius: 8, paddingTop: 5, paddingLeft: 5, paddingRight: 5}}>
+                    <Box 
+                      display="flex"
+                      justifyContent="left"
+                      alignItems="left"
+                      minHeight="7vh" 
+                      padding="1em"
+                      >
+                        <h1><b>Messages</b></h1> 
+                    </Box>
+                  </Card>
+                <PostsListPage/>
+              <FAB/></Route>
               </Container>
-              </React.Fragment>
             </Switch>
           </div>
         </div>

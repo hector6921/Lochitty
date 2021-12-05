@@ -11,7 +11,6 @@ import MuiAlert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 import snackBar from '../components/snackBar.js';
 import '../components/fancyButtons.css';
-import Header from '../components/header';
 import { Container, ImageListItem } from '@mui/material';
 
 const theme = createTheme({
@@ -29,7 +28,6 @@ const theme = createTheme({
 function ProfileSettings({profileID, profileName, setLocation, bio}) {
   return (
     <ThemeProvider theme={theme}>
-       <Header style={{position:"fixed"}}/>
        <Container>
         <Card variant="outlined" sx={{borderColor: 'transparent', borderRadius: 8, paddingTop: 5, paddingLeft: 5, paddingRight: 5}}>
       <Box 

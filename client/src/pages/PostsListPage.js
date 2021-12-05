@@ -30,17 +30,7 @@ class PostsListPage extends React.Component {
     }
 
     return (
-      <Card variant="outlined" sx={{borderColor: 'transparent', borderRadius: 8, paddingTop: 5, paddingLeft: 5, paddingRight: 5}}>
-        <Box 
-              display="flex"
-              justifyContent="left"
-              alignItems="left"
-              minHeight="7vh" 
-              padding="1em"
-              >
-                <h1> <b>Messages</b></h1>
-                
-        </Box>
+      <Card variant="outlined" sx={{borderColor: 'transparent', borderRadius: 8, paddingTop: 0.5, paddingLeft: 5, paddingRight: 5}}>
         <div className="container-fluid text-center">
           <div className="row justify-content-center">
             { this.state.posts }
