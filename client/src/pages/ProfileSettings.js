@@ -91,7 +91,7 @@ function ProfileSettings({profileID, profileName, setLocation, bio}) {
       display="flex"
       >
         <Button variant="text"><a href="/deleteAccount" style={{position:"fixed", bottom: "90px", left: "68px", width: "177px",height: "28px", textTransform:"capitalize", alignItems: "flex-end", whiteSpace: "nowrap", color:"#689ca4"}}><br/>Delete Account?</a></Button>
-        <button style={{position:"fixed", bottom: "30px", right: "40px", width: "200px", fontSize: "1.3em"}} sx={{width: 400}} className="btn btn-fancy">Done</button>
+        <button style={{position:"fixed", bottom: "30px", right: "40px", width: "170px", fontSize: "1.3em"}} sx={{width: 400}} className="btn btn-fancy">Done</button>
       </Box>
 
       </Container>

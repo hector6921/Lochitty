@@ -69,7 +69,7 @@ function Profile({profileID, profileName, setLocation, bio}) {
       <Box
       display="flex"
       >
-        <a href="/profile-settings" style={{marginLeft: "81%"}}><button style={{ position:"fixed", bottom: "30px", right: "40px", width: "200px", fontSize: "1.3em"}} sx={{width: 400}} className="btn btn-fancy">Edit Profile</button></a>
+        <a href="/profile-settings" style={{marginLeft: "81%"}}><button style={{ position:"fixed", bottom: "30px", right: "40px", width: "170px", fontSize: "1.3em"}} sx={{width: 400}} className="btn btn-fancy">Edit Profile</button></a>
       </Box>
 
       </Container>
