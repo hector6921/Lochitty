@@ -13,7 +13,7 @@ import ManageAccountsRoundedIcon from '@mui/icons-material/ManageAccountsRounded
 const actions = [
   { icon: <EventRoundedIcon style={{ fill: '#000000' }} />, name: 'Event', link: '/posts/newEvent'},
   { icon: <ForumRoundedIcon style={{ fill: '#000000' }} />, name: 'Message', link: '/posts/newMessage'},
-  { icon: <ManageAccountsRoundedIcon style={{ fill: '#000000' }} />, name: 'Profile Settings', link:'/profile-settings'},
+  { icon: <ManageAccountsRoundedIcon style={{ fill: '#000000' }} />, name: 'Profile in Development', link:'/profile'},
 ];
 
 const theme = createTheme({

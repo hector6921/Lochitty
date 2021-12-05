@@ -11,6 +11,8 @@ import MuiAlert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 import snackBar from '../components/snackBar.js';
 import '../components/fancyButtons.css';
+import Header from '../components/header';
+import { Container, ImageListItem } from '@mui/material';
 
 const theme = createTheme({
   palette: {
@@ -27,6 +29,8 @@ const theme = createTheme({
 function ProfileSettings({profileID, profileName, setLocation, bio}) {
   return (
     <ThemeProvider theme={theme}>
+       <Header style={{position:"fixed"}}/>
+       <Container>
         <Card variant="outlined" sx={{borderColor: 'transparent', borderRadius: 8, paddingTop: 5, paddingLeft: 5, paddingRight: 5}}>
       <Box 
             display="flex"
@@ -86,11 +90,11 @@ function ProfileSettings({profileID, profileName, setLocation, bio}) {
       <Box
       display="flex"
       >
-        <Button variant="text"><a href="/deleteAccount" style={{textTransform:"capitalize", alignItems: "flex-end", whiteSpace: "nowrap", color:"#689ca4"}}><br/>Delete Account?</a></Button>
-        <button style={{marginLeft: "77%", width: "400px", fontSize: "1.3em"}} sx={{width: 400}} className="btn btn-fancy">Done</button>
+        <Button variant="text"><a href="/deleteAccount" style={{position:"fixed", bottom: "90px", left: "68px", width: "177px",height: "28px", textTransform:"capitalize", alignItems: "flex-end", whiteSpace: "nowrap", color:"#689ca4"}}><br/>Delete Account?</a></Button>
+        <button style={{position:"fixed", bottom: "30px", right: "40px", width: "200px", fontSize: "1.3em"}} sx={{width: 400}} className="btn btn-fancy">Done</button>
       </Box>
 
-
+      </Container>
     </ThemeProvider>
   );
 }

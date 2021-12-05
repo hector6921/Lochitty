@@ -26,16 +26,19 @@ import AboutUsPage from './AboutUsPage';
 import PostMessages from '../components/PostModal.js';
 import PostEvent from '../components/EventModal.js';
 import ProfileSettings from './ProfileSettings.js';
+import Profile from './Profile.js';
 
 export default function Home() {
   return (
-    <><Header />
-    <Container>
     <Router>
         <div>
           <div >
-    
             <Switch>
+              <Route path="/profile" component={Profile} />
+              <Route path="/profile-settings" component={ProfileSettings} />
+              <React.Fragment>  
+              <Header />
+              <Container>
               <Route path="/posts/newMessage" component={PostMessages}/>
               <Route path="/posts/newEvent" component={PostEvent} />
               <Route path="/events" component={ShowEvents}>
@@ -47,21 +50,21 @@ export default function Home() {
                     minHeight="7vh" 
                     padding="1em"
                     >
-                      <h1> <b>Events</b></h1>
+                      <h1><b>Events</b></h1>
                   </Box>
                 </Card>
                 
                 <ShowEvents/><FAB /></Route>
               <Route path="/posts/:id" component={ShowPostPage} />
-              <Route path="/profile-settings" component={ProfileSettings} />
               <Route path="/about-us" component={AboutUsPage} />
               <Route path="/" component={PostsListPage}><PostsListPage/><FAB/></Route>
+              </Container>
+              </React.Fragment>
             </Switch>
           </div>
         </div>
         </Router>
 
-    </Container></>
   );
 }
 
