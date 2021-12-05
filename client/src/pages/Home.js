@@ -22,6 +22,7 @@ import ShowEvents from './EventRoute';
 import AboutUsPage from './AboutUsPage';
 import PostMessages from '../components/PostModal.js';
 import PostEvent from '../components/EventModal.js';
+import Profile from './ProfilePage.js';
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
               <Route path="/posts/newEvent" component={PostEvent} />
               <Route path="/events" component={ShowEvents} />
               <Route path="/posts/:id" component={ShowPostPage} />
+              <Route path="/profiles" component={Profile} />
               <Route path="/about-us" component={AboutUsPage} />
               <Route path="/" component={PostsListPage} />
             </Switch>

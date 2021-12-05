@@ -91,10 +91,10 @@ export default function Header() {
       <ToggleButton style={{borderColor:'transparent', fontFamily: 'Roboto', paddingInline:'1em',fontWeight: "bold", borderRadius: '0 100px 100px 0'}} size='small' value="events" href="/events">Events</ToggleButton>
     </ToggleButtonGroup>
   
-
     </div>
       </div>
       {/* <ToggleButton onChange={() => {setDisplayModal(!displayModal)}} onClick={modalPage} value="events" style={{color:"#000000"}}>Login</ToggleButton>  */}
+      
       <NestedModal/>
       </div>
       {/* pop up functionality */}

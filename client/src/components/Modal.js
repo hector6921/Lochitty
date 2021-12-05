@@ -78,6 +78,7 @@ export default function NestedModal() {
 
   return (
     <div>
+      <Button variant="text"><a href="/profiles" style={{color:"black"}}>Profile</a></Button>
       <Button onClick={handleOpen}>Login</Button>
       <Modal
         open={open}

@@ -24,6 +24,35 @@ const theme = createTheme({
   },
 });
 
+/*
+deletePost = (event) => {
+  fetch("/api/posts/", {
+    method: 'POST',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({content: this.state.content, title: this.state.title}),
+  })
+    .then(res => {
+      if(res.ok) {
+        return res.json()
+      }
+
+      throw new Error('Content validation');
+    })
+    .then(post => {
+      this.setState({
+        success: true,
+      });
+    })
+    .catch(err => {
+      this.setState({
+        error: true,
+      });
+    });
+}
+*/
 
 function Post({title, content, createdAt, id }) {
   return (
@@ -33,7 +62,7 @@ function Post({title, content, createdAt, id }) {
       <Box sx={{ gridArea: 'title'}}>
         <CardHeader
           sx={{fontSize: 2}}
-          title={ title }
+          title={ title}
           subheader={ createdAt } 
         />
       </Box>
@@ -51,11 +80,9 @@ function Post({title, content, createdAt, id }) {
       
       <CardContent sx={{maxWidth:'25em'}}>
       <Box sx={{ gridArea: 'sidebar'}}>
-        
-      <IconButton style={{outline: 'none'}} aria-label="delete" color="primary">
-          <DeleteOutlineRoundedIcon />
+        <IconButton style={{outline: 'none', position: 'absolute', left: '85%'}} aria-label="delete" color="primary">
+            <DeleteOutlineRoundedIcon />
         </IconButton>
-
       </Box>
 
 
