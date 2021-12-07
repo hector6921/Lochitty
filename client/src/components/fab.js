@@ -35,11 +35,12 @@ export default function BasicSpeedDial() {
   return (
     <ThemeProvider theme={theme}>
 
-    <Box sx={{outline: 'none', position: 'fixed', bottom: 0, right: 0, bcolor: 'linear-gradient(to right bottom, #430089, #82ffa1)', height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
+    <Box sx={{outline: 'none', position: 'fixed', fontSize:"4em", bottom: "1%", right: "50%", bcolor: 'linear-gradient(to right bottom, #430089, #82ffa1)', transform: 'translateZ(0px)', flexGrow: 1 }}>
       <SpeedDial
         ariaLabel="SpeedDial basic example"
-        sx={{outline: 'none', position: 'absolute', bottom: 16, right: 16 }}
-        icon={<SpeedDialIcon />}
+        sx={{outline: 'none', height: 500, position: 'absolute', fontSize:"4em", left: "50%", bottom: 10, right: "50%" }}
+        icon={<SpeedDialIcon fontSize="large"/>}
+        FabProps={{style: {height: 80, width: 80 } }}
       >
         {actions.map((action) => (
           <SpeedDialAction

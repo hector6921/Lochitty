@@ -80,7 +80,7 @@ function Post({title, content, createdAt, id }) {
       
       <CardContent sx={{maxWidth:'25em'}}>
       <Box sx={{ gridArea: 'sidebar'}}>
-        <IconButton style={{outline: 'none', position: 'absolute', left: '80%'}} aria-label="delete" color="primary">
+        <IconButton style={{outline: 'none'}} aria-label="delete" color="primary">
             <DeleteOutlineRoundedIcon />
         </IconButton>
       </Box>

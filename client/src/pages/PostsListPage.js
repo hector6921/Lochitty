@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import FAB from '../components/fab';
 
 
+
 class PostsListPage extends React.Component {
   state = {
     posts: [`<Post props={'hello',"hellsoo",1} key='Name' />`],
@@ -31,13 +32,17 @@ class PostsListPage extends React.Component {
     }
 
     return (
-      <><Card variant="outlined" sx={{ borderColor: 'transparent', borderRadius: 8, paddingTop: 0.5, paddingLeft: 5, paddingRight: 5 }}>
+      <><Card variant="outlined" sx={{ borderColor: 'transparent', borderRadius: 8, paddingBottom:"8em", paddingTop: 0.5, paddingLeft: 5, paddingRight: 5 }}>
         <div className="container-fluid text-center">
           <div className="row justify-content-center">
             {this.state.posts}
           </div>
         </div>
-      </Card><FAB /></>
+      </Card>
+      
+      
+      <FAB/>
+      </>
     );
   }
 }
