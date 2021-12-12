@@ -49,15 +49,14 @@ function Profile({profileID, profileName, setLocation, bio}) {
       <Box 
             position = "absolute"
             top = "35%"
-            left = "43%"
+            left = "41%"
             display="flex"
             minHeight="7vh" 
             zIndex= "3"
             bottomMargin="2em"
             textAlign="center"
             >
-              <h1> <b>FULL NAME</b></h1>
-              
+              <h1> <b>Megan Stanley</b></h1>
       </Box>
 
       <div style={{position: "absolute", width: "70%", paddingTop: '7em'}}>

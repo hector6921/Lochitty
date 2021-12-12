@@ -53,6 +53,20 @@ deletePost = (event) => {
     });
 }
 */
+function getDateToCreateAt(date) {
+  var d = new Date( date );
+  // d = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+  // var newMinute;
+  // newMinute.toString(d.getMinutes());
+  // if(newMinute.substring(2) == null) newMinute.concat("0");
+  d.toLocaleDateString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+  //d = d.toDateString().substring(3) + " | " + (d.getHours()% 12 || 12) + ":" + d.getMinutes();
+  return d.toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true }).replace(',','');;
+
+
+  
+
+}
 
 function Post({title, content, createdAt, id }) {
   return (
@@ -63,7 +77,7 @@ function Post({title, content, createdAt, id }) {
         <CardHeader
           sx={{fontSize: 2}}
           title={ title}
-          subheader={ createdAt } 
+          subheader={ getDateToCreateAt(createdAt) } 
         />
       </Box>
       
@@ -71,14 +85,14 @@ function Post({title, content, createdAt, id }) {
 
       <Box sx={{ gridArea: 'main'}}>
         
-      <Typography sx={{fontSize: 20}}>
+      <Typography sx={{fontSize: 20, paddingLeft: '55px'}}>
         { content }
         </Typography>
 
       </Box>
       </CardContent>
       
-      <CardContent sx={{maxWidth:'25em'}}>
+      <CardContent sx={{maxWidth:'25em', marginLeft: "auto"}}>
       <Box sx={{ gridArea: 'sidebar'}}>
         <IconButton style={{outline: 'none'}} aria-label="delete" color="primary">
             <DeleteOutlineRoundedIcon />
